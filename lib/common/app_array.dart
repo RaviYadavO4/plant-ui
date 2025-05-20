@@ -33,4 +33,16 @@ var drawerList = [
    
   ];
 
+  
+var hs_categories = [
+  {"id" : 0,"category": "All"},
+  {"id" : 1,"category": "Outdoor"},
+  {"id" : 2,"category": "Indoor"},
+  {"id" : 3,"category": "Office"},
+  {"id" : 4,"category": "Garden"},
+   
+  ];
+
+  
+
 }

@@ -12,8 +12,8 @@ class BottomScreenProvider extends ChangeNotifier {
   final List<Widget> screens = [
     const HomeScreen(),
     Container(color: appColors.white),
-    Container(color: appColors.white),
-    Container(color: appColors.white),
+    const HomeScreen(),
+    const HomeScreen(),
     // const CryptoScreen(),
     // const InsightScreen(),
     // const ProfileScreen(),
