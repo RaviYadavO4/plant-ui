@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import 'package:plant_ui/common/theme/scale.dart';
+import 'package:plant_ui/providers/bottom_screen_provider/home_screen_provider.dart';
+import 'package:plant_ui/widgets/common_state.dart';
+import 'package:provider/provider.dart';
+
+class HomeBodyLayout extends StatefulWidget {
+  const HomeBodyLayout({super.key});
+
+  @override
+  State<HomeBodyLayout> createState() => _HomeBodyLayoutState();
+}
+
+class _HomeBodyLayoutState extends State<HomeBodyLayout> {
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      physics: const ClampingScrollPhysics(),
+      child: Consumer<HomeScreenProvider>(
+        builder: (context, homeCtrl, _) {
+          return StatefulWrapper(
+            onInit:
+                () => Future.delayed(
+                  DurationClass.ms150,
+                ).then((value) => homeCtrl.init()),
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_ui/config.dart';
+import 'package:plant_ui/screens/bottom_screen/home_screen/home_screen.dart';
 
 class BottomScreenProvider extends ChangeNotifier {
   int currentTab = 0;
@@ -9,16 +10,16 @@ class BottomScreenProvider extends ChangeNotifier {
 
   //tab screens list
   final List<Widget> screens = [
-     Container(color: appColors.white),
-      Container(color: appColors.white),
-       Container(color: appColors.white),
-        Container(color: appColors.white),
+    const HomeScreen(),
+    Container(color: appColors.white),
+    Container(color: appColors.white),
+    Container(color: appColors.white),
     // const CryptoScreen(),
     // const InsightScreen(),
     // const ProfileScreen(),
   ];
 
-//drawer index on taps screen
+  //drawer index on taps screen
   drawerOnTap(int key, context) {
     switch (key) {
       case 0:
@@ -66,13 +67,13 @@ class BottomScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-//navigation tab change
+  //navigation tab change
   tabChange(int index) {
     currentTab = index;
     notifyListeners();
   }
 
-//PayList onTap method
+  //PayList onTap method
   onTap(context) {
     Navigator.pop(context);
     Navigator.pop(context);

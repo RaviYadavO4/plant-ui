@@ -5,6 +5,7 @@ import 'package:plant_ui/routes/index.dart';
 import 'package:provider/provider.dart';
 
 import 'providers/bottom_screen_provider/bottom_screen_provider.dart';
+import 'providers/bottom_screen_provider/home_screen_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context)=>SignInProvider()),
         ChangeNotifierProvider(create: (context)=>SignUpProvider()),
         ChangeNotifierProvider(create: (context)=>BottomScreenProvider()),
+        ChangeNotifierProvider(create: (context)=>HomeScreenProvider()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
