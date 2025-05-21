@@ -7,6 +7,8 @@ import 'package:plant_ui/screens/bottom_screen/home_screen/layout/hs_body_layout
 import 'package:plant_ui/widgets/common_state.dart';
 import 'package:provider/provider.dart';
 
+import 'layout/hs_top_plants_layout/hs_top_plants_layout.dart';
+
 class HomeBodyLayout extends StatefulWidget {
   const HomeBodyLayout({super.key});
 
@@ -28,6 +30,7 @@ class _HomeBodyLayoutState extends State<HomeBodyLayout> {
                 children: [
                 HsSearchBarLayout(),
                 HsCategoryTabLayout(),
+                HsTopPlantsLayout()
               ],
             ).paddingOnly(
               bottom: Sizes.s100,

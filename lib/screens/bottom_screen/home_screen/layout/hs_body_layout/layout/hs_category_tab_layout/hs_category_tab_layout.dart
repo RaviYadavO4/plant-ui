@@ -17,7 +17,7 @@ class HsCategoryTabLayout extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: homeCtrl.categories.asMap().entries.map((entries){
                 var e = entries.value;
-                var index = entries.key;
+                // var index = entries.key;
 
                 print('entries '+"${e["category"]}");
 
