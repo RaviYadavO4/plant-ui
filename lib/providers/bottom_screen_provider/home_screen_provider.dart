@@ -12,7 +12,6 @@ class HomeScreenProvider extends ChangeNotifier  {
     categories = appArray.hs_categories;
    }
   
-
   selectCategoriesChange(value) {
     selectedCategory = value;
     notifyListeners();
