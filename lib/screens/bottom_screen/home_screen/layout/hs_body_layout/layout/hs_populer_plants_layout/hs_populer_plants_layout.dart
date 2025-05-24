@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:plant_ui/common/extension/widget_extension.dart';
 import 'package:plant_ui/config.dart';
 import 'package:plant_ui/providers/bottom_screen_provider/home_screen_provider.dart';
+import 'package:plant_ui/routes/index.dart';
 import 'package:provider/provider.dart';
 
 class HsPopulerPlantsLayout extends StatelessWidget {
@@ -41,7 +43,8 @@ class HsPopulerPlantsLayout extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 20.0),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (itemBuilder, index) {
-                  return Container(
+                  return
+                   Container(
                     width: 200.0,
                     margin: const EdgeInsets.only(right: 20, bottom: 10),
                     decoration: BoxDecoration(
@@ -103,7 +106,7 @@ class HsPopulerPlantsLayout extends StatelessWidget {
                         ),
                       ],
                     ),
-                  );
+                  ).inkWell(onTap: () => Navigator.pushNamed(context, routeName.plantDetailsScreen,arguments:homeCtrl.populerPlants[index] ),);
                 },
               ),
             )

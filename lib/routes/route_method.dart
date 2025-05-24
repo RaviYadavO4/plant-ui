@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_ui/routes/index.dart';
+import 'package:plant_ui/screens/app_pages_screen/plant_details_screen/plant_details_screen.dart';
 import 'package:plant_ui/screens/auth_screen/sign_up_screens/sign_up_screen.dart';
 import 'package:plant_ui/screens/bottom_screen/bottom_bar_layout/bottom_bar_layout.dart';
 
@@ -16,6 +17,7 @@ class AppRoute {
     routeName.signupScreen: (p0) => const SignUpScreen(),
     routeName.forgetPasswordScreen: (p0) => const ForgetPasswordScreen(),
     routeName.bottomBarLayout: (p0) => const BottomBarLayout(),
+    routeName.plantDetailsScreen: (p0) => const PlantDetailsScreen(),
 
   };
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_ui/config.dart';
 import 'package:plant_ui/providers/bottom_screen_provider/home_screen_provider.dart';
+import 'package:plant_ui/routes/index.dart';
 import 'package:provider/provider.dart';
 
 class HsTopPlantsLayout extends StatelessWidget {
@@ -20,31 +21,27 @@ class HsTopPlantsLayout extends StatelessWidget {
                 onPageChanged: (value) => homeCtrl.activePlantsChange(value),
                 itemBuilder: (itemBuilder, index) {
                   bool active = index == homeCtrl.activePlantsPage;
-                  return slider(active, index,homeCtrl);
+                  return slider(active, index,context,homeCtrl);
                 },
               ),
             );
     });
   }
 
-  AnimatedContainer slider(active, index,HomeScreenProvider homeCtrl) {
+  AnimatedContainer slider(active, index,context,HomeScreenProvider homeCtrl) {
     double margin = active ? 20 : 30;
     return AnimatedContainer(
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOutCubic,
       margin: EdgeInsets.all(margin),
-      child: mainPlantsCard(index,homeCtrl),
+      child: mainPlantsCard(index,context,homeCtrl),
     );
   }
-  Widget mainPlantsCard(index,HomeScreenProvider homeCtrl) {
+  Widget mainPlantsCard(index,context,HomeScreenProvider homeCtrl) {
     return GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (builder) => DetailsPage(plant: plants[index]),
-        //   ),
-        // );
+        Navigator.pushNamed(context, routeName.plantDetailsScreen,arguments:homeCtrl.plants[index] );
+        
       },
       child: Container(
         padding: const EdgeInsets.all(8.0),

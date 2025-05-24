@@ -4,6 +4,7 @@ class RouteName {
   final String signupScreen = '/signupScreen';
   final String forgetPasswordScreen = '/forgetPasswordScreen';
   final String bottomBarLayout = '/bottomBarLayout';
+  final String plantDetailsScreen = '/plantDetailsScreen';
  
 
 }
