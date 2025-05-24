@@ -8,6 +8,7 @@ class HomeScreenProvider extends ChangeNotifier  {
 
     List categories = [];
     List plants = [];
+    List populerPlants = [];
   
 
    dynamic selectedCategory = appArray.hs_categories[0]["id"];
@@ -16,7 +17,9 @@ class HomeScreenProvider extends ChangeNotifier  {
    onInit() {
     categories = appArray.hs_categories;
     plants = appArray.plants;
+    populerPlants = appArray.populerPlants;
     controller = PageController(viewportFraction: 0.6, initialPage: 0);
+    notifyListeners();
    }
   
   selectCategoriesChange(value) {

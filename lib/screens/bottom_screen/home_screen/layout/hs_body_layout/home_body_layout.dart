@@ -3,6 +3,7 @@ import 'package:plant_ui/common/extension/widget_extension.dart';
 import 'package:plant_ui/common/theme/scale.dart';
 import 'package:plant_ui/providers/bottom_screen_provider/home_screen_provider.dart';
 import 'package:plant_ui/screens/bottom_screen/home_screen/layout/hs_body_layout/layout/hs_category_tab_layout/hs_category_tab_layout.dart';
+import 'package:plant_ui/screens/bottom_screen/home_screen/layout/hs_body_layout/layout/hs_populer_plants_layout/hs_populer_plants_layout.dart';
 import 'package:plant_ui/screens/bottom_screen/home_screen/layout/hs_body_layout/layout/hs_search_bar/hs_search_bar_layout.dart';
 import 'package:plant_ui/widgets/common_state.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +31,8 @@ class _HomeBodyLayoutState extends State<HomeBodyLayout> {
                 children: [
                 HsSearchBarLayout(),
                 HsCategoryTabLayout(),
-                HsTopPlantsLayout()
+                HsTopPlantsLayout(),
+                HsPopulerPlantsLayout()
               ],
             ).paddingOnly(
               bottom: Sizes.s100,
